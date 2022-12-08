@@ -9,7 +9,7 @@
                     <input type="text" name="employeecode" [(ngModel)]="employeecode"  class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <button (click)="readValues()" class="btn btn-primary">SUBMIT</button>
+                    <button (click)="readValues()" class="btn btn-primary">SEARCH</button>
                 </div>
             </div>
             <div class="row g-3" *ngFor="let i of searchdata">
@@ -36,6 +36,9 @@
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">USERNAME</label>
                     <input type="text" value={{i.username}}  class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <button class="btn btn-danger" (click)="deletebuttonclick(i.id)">DELETE</button>
                 </div>
             </div>
         </div>
